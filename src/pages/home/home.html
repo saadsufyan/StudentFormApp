@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-row>
+    <ion-col>
+      <h4>
+        Add a new student
+      </h4>
+    
+      <form class="login-padding">
+        <ion-item>
+            <ion-label color="dark" stacked>Your First Name</ion-label>
+            <ion-input type="text" name="fname" [(ngModel)]="firstName" placeholder="Enter your  first name"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="dark" stacked>Your Last Name</ion-label>
+          <ion-input type="text" name="lname" [(ngModel)]="lastName" placeholder="Enter your  last name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="dark" stacked>Your Email</ion-label>
+            <ion-input type="email" name="email" [(ngModel)]="email" placeholder="Enter your email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label color="dark" stacked>Phone Number</ion-label>
+            <ion-input type="number" name="phone" [(ngModel)]="phone" placeholder="Enter your phone number"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label color="dark" stacked>Roll number</ion-label>
+          <ion-input type="text" name="rollNo" [(ngModel)]="rollNo" placeholder="Enter your roll number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="dark" stacked>Class name</ion-label>
+        <ion-input type="text" name="className" [(ngModel)]="className" placeholder="Enter your class name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label color="dark" stacked>DOB</ion-label>
+        <ion-datetime class="text-size" pickerFormat="MM/DD/YYYY" name="dob" [(ngModel)]="dob" placeholder="DOB"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label color="dark" stacked>City</ion-label>
+        <ion-input type="text" name="city" [(ngModel)]="city" placeholder="Enter your city name"></ion-input>
+      </ion-item>
+    </form>
+    </ion-col>
+  </ion-row>
+  <ion-row class="next-btn">
+      <ion-col class="btn-box">
+          <div class="">
+              <button class="login-btn" (click)="onAddStudent()">
+                  Submit
+              </button>
+          </div>
+      </ion-col>
+  </ion-row>
+</ion-content>
